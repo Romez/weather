@@ -1,4 +1,4 @@
 import 'source-map-support/register';
-import half from './half';
+import Weather from './Weather';
 
-export default half;
+export default Weather;

@@ -1,7 +1,7 @@
 install: install-deps
 
 run:
-	npx babel-node -- 'src/bin/hexlet.js' 10
+	npx babel-node -- 'src/bin/weather.js' --service ODWeather berlin
 
 install-deps:
 	npm install

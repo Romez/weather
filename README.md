@@ -21,3 +21,6 @@ $ make install
 ```sh
 $ make test
 ```
+
+`weather --service MetaWeather berlin`
+`weather --service ODWeather berlin`
