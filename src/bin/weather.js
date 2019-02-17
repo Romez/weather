@@ -6,7 +6,7 @@ import Weather from '..';
 
 const run = async () => {
   const serviceName = get(argv, 'service');
-  const city = get(argv, [0, '_']);
+  const city = get(argv, ['_', 0]);
 
   const weather = new Weather(serviceName);
   const data = await weather.getInfoByCity(city);
