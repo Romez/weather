@@ -1,14 +1,14 @@
 import Weather from '../src';
-import MetaWeather from '../src/services/MetaWeather';
-import MetaWeatherResponseFixture from './MetaWeatherResponse.fixture.js';
+import ODWeather from '../src/services/ODWeather';
+import ODWeatherResponse from './__fixtures__/ODWeatherResponse.json';
 
 test('weather', async () => {
-  const get = () => Promise.resolve({ data: MetaWeatherResponseFixture });
-  const serviceFactoryMock = () => new MetaWeather({ get });
+  const get = () => Promise.resolve({ data: ODWeatherResponse });
+  const serviceFactoryMock = () => new ODWeather({ get });
 
-  const weather = new Weather('MetaWeather', serviceFactoryMock);
+  const weather = new Weather('ODWeather', serviceFactoryMock);
 
-  const data = await weather.getInfoByCity('berlin');
-  console.log(data);
+  const info = await weather.getInfoByCity('berlin');
+
+  expect({ temperature: 16.7 }).toEqual(info);
 });
-
