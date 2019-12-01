@@ -22,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/hexlet-boilerplates/nodejs-package.git"
   },
-  "author": "Kirill Mokevnin",
+  "author": "Roman Ushakov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hexlet-boilerplates/nodejs-package/issues"
